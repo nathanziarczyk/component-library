@@ -1,4 +1,17 @@
-// Import the Button component from this folder and send it down to ./components/index.js
-import Button from './Button';
+import React from 'react';
+import styled from 'styled-components';
+
+const ButtonWrapper = styled.button`
+	border-radius: 8px;
+	color: #fff;
+	background: mediumvioletred;
+	padding: 8px 15px;
+	border: none;
+	outline: none;
+`;
+
+const Button = (props) => {
+	return <ButtonWrapper {...props}>{props.children}</ButtonWrapper>;
+}
 
 export default Button;
